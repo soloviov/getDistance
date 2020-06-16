@@ -1,0 +1,115 @@
+{
+    "name": "test",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "serve",
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build --modern",
+        "lint": "vue-cli-service lint"
+    },
+    "dependencies": {
+        "vue": "^2.6.11"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-eslint": "~4.4.0",
+        "@vue/cli-service": "~4.4.0",
+        "eslint": "^6.7.2",
+        "eslint-config-airbnb-base": "^14.2.0",
+        "eslint-plugin-compat": "^3.7.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-vue": "^6.2.2",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "browserslist": [
+        "last 2 years",
+        "> 1%",
+        "last 2 Chrome versions",
+        "last 2 Firefox versions",
+        "last 2 Safari versions",
+        "last 1 Edge versions",
+        "last 1 versions",
+        "not ie <= 11"
+    ],
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "browser": true,
+            "es6": true,
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "plugin:compat/recommended",
+            "airbnb-base"
+        ],
+        "parserOptions": {
+            "ecmaVersion": 2020,
+            "sourceType": "module"
+        },
+        "globals": {
+            "Atomics": "readonly",
+            "SharedArrayBuffer": "readonly",
+            "document": true,
+            "window": true
+        },
+        "plugins": [
+            "vue"
+        ],
+        "rules": {
+            "max-len": [
+                "error",
+                6144,
+                {
+                    "code": 100,
+                    "ignorePattern": "true",
+                    "ignoreComments": true,
+                    "ignoreTrailingComments": true,
+                    "ignoreUrls": true,
+                    "ignoreStrings": true,
+                    "ignoreTemplateLiterals": true,
+                    "ignoreRegExpLiterals": true
+                }
+            ],
+            "indent": [
+                "error",
+                4,
+                {
+                    "SwitchCase": 1,
+                    "VariableDeclarator": 1,
+                    "outerIIFEBody": 1,
+                    "MemberExpression": 1,
+                    "FunctionDeclaration": {
+                        "parameters": 1,
+                        "body": 1
+                    },
+                    "FunctionExpression": {
+                        "parameters": 1,
+                        "body": 1
+                    },
+                    "CallExpression": {
+                        "arguments": 1
+                    },
+                    "ArrayExpression": 1,
+                    "ObjectExpression": 1,
+                    "ImportDeclaration": 1,
+                    "flatTernaryExpressions": false,
+                    "ignoreComments": false,
+                    "ignoredNodes": [
+                        "TemplateLiteral *"
+                    ]
+                }
+            ],
+            "comma-dangle": [
+                "error",
+                {
+                    "arrays": "never",
+                    "objects": "never",
+                    "imports": "never",
+                    "exports": "never",
+                    "functions": "never"
+                }
+            ]
+        }
+    }
+}
